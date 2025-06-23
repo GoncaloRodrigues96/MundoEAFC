@@ -3,18 +3,21 @@
     "titulo": "Bem-vindo ao meu blog",
     "conteudo": "Este é o primeiro post! Obrigado por visitares o meu blog.",
     "data": "23/06/2025 15:42",
-    "imagem": "https://via.placeholder.com/600x300"
+    "imagem": "https://via.placeholder.com/600x300",
+    "dono": "@DetectiveFUT"
   },
   {
     "titulo": "Segundo Post",
     "conteudo": "Aqui partilho algumas ideias interessantes...",
     "data": "23/06/2025 15:42",
-    "imagem": ""
+    "imagem": "",
+    "dono": "@DetectiveFUT"
   },
   {
     "titulo": "🚨FC26 MODO DE JOGO VAZADO🚨",
     "conteudo": "A EA está actualmente a testar internamente um novo modo de jogo que mistura elementos do Volta, FIFA Street e Rush:\n\n🏠 Arenas interiores\n🛣️ Rua\n🏖️ Praia\n\n⚠️ Nota: Esta informação baseia-se numa fase de testes interna. O jogo final poderá sofrer alterações até ao lançamento oficial.\n\nQual é a funcionalidade do FIFA Street que mais gostarias que a EA trouxesse de volta no FC26?",
     "data": "23/06/2025, 14:35:23",
-    "imagem": "https://pbs.twimg.com/media/GtgGTZOW0AAA41q?format=jpg&name=small"
+    "imagem": "https://pbs.twimg.com/media/GtgGTZOW0AAA41q?format=jpg&name=small",
+    "dono": "@DetectiveFUT"
   }
 ]
