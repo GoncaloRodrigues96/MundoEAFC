@@ -13,6 +13,7 @@
 <body>
   <h1>Criar Post</h1>
   <input type="text" id="titulo" placeholder="Título do post">
+  <input type="text" id="dono" placeholder="Original/Adaptado de">
   <input type="text" id="imagem" placeholder="URL da imagem (opcional)">
   <textarea id="conteudo" rows="8" placeholder="Escreve aqui o conteúdo..."></textarea>
   <button onclick="adicionarPost()">Adicionar Post</button>
@@ -27,6 +28,7 @@
     function adicionarPost() {
       const titulo = document.getElementById("titulo").value.trim();
       const conteudo = document.getElementById("conteudo").value.trim();
+      const dono = document.getElementById("dono").value.trim();
       const imagem = document.getElementById("imagem").value.trim();
       const data = new Date().toLocaleString("pt-PT");
 
@@ -35,10 +37,11 @@
         return;
       }
 
-      posts.push({ titulo, conteudo, data, imagem });
+      posts.push({ titulo, conteudo, data, imagem, dono });
       document.getElementById("titulo").value = "";
       document.getElementById("conteudo").value = "";
       document.getElementById("imagem").value = "";
+      document.getElementById("dono").value = "";
       actualizarJSON();
     }
 
