@@ -47,6 +47,7 @@
           div.className = "post";
           div.innerHTML = `
             <h2>${post.titulo}</h2>
+            <p>${post.dono}</p>
             <div class="data">${post.data}</div>
             ${post.imagem ? `<img src="${post.imagem}" alt="Imagem do post">` : ""}
             <p>${post.conteudo.replace(/\n/g, "<br>")}</p>
