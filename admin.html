@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Administrador do Blog</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; font-size: 1em; }
+    button { padding: 10px 20px; font-size: 1em; }
+    pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Criar Post</h1>
+  <input type="text" id="titulo" placeholder="Título do post">
+  <input type="text" id="imagem" placeholder="URL da imagem (opcional)">
+  <textarea id="conteudo" rows="8" placeholder="Escreve aqui o conteúdo..."></textarea>
+  <button onclick="adicionarPost()">Adicionar Post</button>
+
+  <h2>JSON Gerado</h2>
+  <p>Depois de adicionar todos os posts, copia o conteúdo abaixo para o ficheiro <code>posts.json</code>.</p>
+  <pre id="json-output">[]</pre>
+
+  <script>
+    let posts = [];
+
+    function adicionarPost() {
+      const titulo = document.getElementById("titulo").value.trim();
+      const conteudo = document.getElementById("conteudo").value.trim();
+      const imagem = document.getElementById("imagem").value.trim();
+      const data = new Date().toLocaleString("pt-PT");
+
+      if (!titulo || !conteudo) {
+        alert("Por favor preenche o título e o conteúdo.");
+        return;
+      }
+
+      posts.push({ titulo, conteudo, data, imagem });
+      document.getElementById("titulo").value = "";
+      document.getElementById("conteudo").value = "";
+      document.getElementById("imagem").value = "";
+      actualizarJSON();
+    }
+
+    function actualizarJSON() {
+      document.getElementById("json-output").textContent = JSON.stringify(posts, null, 2);
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

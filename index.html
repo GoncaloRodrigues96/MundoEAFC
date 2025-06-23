@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    .post { border-bottom: 1px solid #ccc; margin-bottom: 20px; padding-bottom: 10px; }
+    .post h2 { margin-bottom: 5px; }
+    .post .data { font-size: 0.9em; color: #888; }
+    .post img { max-width: 100%; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Blog</h1>
+  <div id="posts-container">A carregar posts...</div>
+
+  <script>
+    fetch('posts.json')
+      .then(response => response.json())
+      .then(posts => {
+        const container = document.getElementById('posts-container');
+        if (!posts.length) {
+          container.innerHTML = "<p>Sem posts.</p>";
+          return;
+        }
+        container.innerHTML = "";
+        posts.reverse().forEach(post => {
+          const div = document.createElement("div");
+          div.className = "post";
+          div.innerHTML = `
+            <h2>${post.titulo}</h2>
+            <div class="data">${post.data}</div>
+            ${post.imagem ? `<img src="${post.imagem}" alt="Imagem do post">` : ""}
+            <p>${post.conteudo}</p>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById('posts-container').innerHTML = "<p>Erro ao carregar os posts.</p>";
+        console.error(err);
+      });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

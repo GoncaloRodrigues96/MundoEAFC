@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Bem-vindo ao meu blog",
+    "conteudo": "Este é o primeiro post! Obrigado por visitares o meu blog.",
+    "data": "23/06/2025 15:42",
+    "imagem": "https://via.placeholder.com/600x300"
+  },
+  {
+    "titulo": "Segundo Post",
+    "conteudo": "Aqui partilho algumas ideias interessantes...",
+    "data": "23/06/2025 15:42",
+    "imagem": ""
+  }
+]
