@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 700px;
+    padding: 0 20px;
+    background: #f8f8f8;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+.post {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.post img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.meta {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mensagem {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.search-form {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+}
+    .button-link {
+      padding: 10px 20px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-family: sans-serif;
+    }
+
+    .button-link:hover {
+      background: #005bb5;
+    }
+
+    .headerDIV {
+  text-align: center;
+    }
+
+    hr.double {
+ border-top: 3px double;
+ border-bottom: none;
+}

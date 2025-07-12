@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-PT"> <!-- Alterado para português de Portugal -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo EAFC24</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="headerDIV">
+            <a href="index.php" class="button-link">Início</a>
+            <a href="fifapoints.html" class="button-link">Calcular EAFC Points</a>
+        </div>
+    
+    </header>
+<body>
+    <h1>Mundo EAFC24</h1>
+    <br>
+    <h1 style="margin-left: 15px;">Calculadora retorno dos EAFC Points</h1>
+    <br>
+    <p style="margin-left: 15px;">Quantos EAFC Points vais inserir?</p>
+    <br>
+    <input style="margin-left: 15px;" type="text" id="valorA" placeholder="EAFC Points inseridos">
+    <button style="margin-left: 15px;" onclick="calcularRegraDeTres()">Calcular</button>
+    <br><br>
+    <p style="margin-left: 15px;">Abrindo pacotes de Ouro, o valor médio esperado dando quick-sell é <span id="resultado"></span> moedas.</p>
+    <p style="margin-left: 15px;">Conseguimos comprar em média <span id="resultado2"></span> Premium Gold Packs.</p>
+<br><hr class="double"><br>
+<table border="1" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Pack</th>
+      <th>Preço (moedas)</th>
+      <th>Preço (EAFC Points)</th>
+      <th>Quick-sell médio</th>
+      <th>Venda no mercado</th>
+      <th>Retorno líquido*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Premium Bronze Pack</td>
+      <td>750</td>
+      <td>—</td>
+      <td>~230–330</td>
+      <td>~400–900</td>
+      <td>
+        🔹 Quick-sell: negativo<br>
+        🔹 Mercado: ligeiramente positivo ocasionalmente
+      </td>
+    </tr>
+    <tr>
+      <td>Premium Silver Pack</td>
+      <td>3 750</td>
+      <td>75</td>
+      <td>1 541</td>
+      <td>1 761</td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>Premium Gold Pack</td>
+      <td>7 500</td>
+      <td>150</td>
+      <td>~1500-2250</td>
+      <td>—</td>
+      <td>
+        Estimativa de 20–30 % de retorno em bons pulls<br>
+        ≈ 1 500 a 2 250 coins
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>* Lucro = valor de retorno – preço de compra</em></p>
+
+
+    <script>
+    function calcularRegraDeTres() {
+        // Obter o valor de a
+        var a = parseFloat(document.getElementById("valorA").value);
+
+        // Calcular o valor de y e arredondá-lo para o valor mais próximo
+        var y = Math.round((a * 1875) / 150);
+
+        // Exibir o resultado
+        document.getElementById("resultado").textContent = y;
+
+        ////////////////////////
+        
+        // Obter o valor de b
+        var b = parseFloat(document.getElementById("valorA").value);
+
+        // Calcular o valor de y e arredondá-lo para o valor mais próximo
+        var z = Math.round((b / 150));
+
+        // Exibir o resultado
+        document.getElementById("resultado2").textContent = z;
+    }
+</script>
+
+</body>
+</html>
